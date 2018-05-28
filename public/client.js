@@ -25,7 +25,7 @@ function sendToServer(){
 			socket.emit('messages', message);
 }
 
-//Append the user manage to the chatbox
+//Append the user message to the chatbox
 function appendToBox(message){
 	$(".chatlogs").append("<div class=\'chat user\' >"+
 		"<div class=\'user-photo\' ><img alt=\'BodoLogo\' src=\'assets/img/UserLogo.png\'/></div>"+
