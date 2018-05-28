@@ -46,9 +46,6 @@ io.on('connection', function(client) {
 				responseToClient = responseWitAI;
 				}
 			}
-			var currentTime = new Date();
-			var currentHour = currentTime.getUTCHours();
-			var currentMin = currentTime.getUTCMinutes();
 			client.emit('thread', '<div class=\'chat bot\' ><div class=\'user-photo\'></div><p class=\'chat-message\' >' + responseToClient +'</p></div>');
 			return;
 		}).catch(console.error);
