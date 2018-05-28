@@ -27,7 +27,6 @@ io.on('connection', function(client) {
   	});
 
   	client.on('messages', function(data){
-		console.log("date"+data);
 		const clientAPI = new Wit({accessToken});
 		interactive(clientAPI);
 		clientAPI.message(data, {})
@@ -37,7 +36,6 @@ io.on('connection', function(client) {
 			var object = result.entities
 			var objectVal = Object.values(object)[0];
 			var responseToClient = "";
-			//console.log(objectVal);
 			if (Object.values(object).length == 0){
 				responseToClient = "Auf diese Frage kann keine Antwort gefunden werden";
 			}else{

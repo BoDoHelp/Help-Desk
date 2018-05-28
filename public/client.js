@@ -7,13 +7,8 @@ socket.on('connect', function(data) {
 socket.on('thread', function(data) {
     $('.chatlogs').append(data);
 	$(".bot:last-child .user-photo").append("<img alt='BodoLogo' src='assets/img/BodoLogo.png'/>");
-	/*var img = document.createElement("img");
-	img.src = "../BodoLogo.png";
-	var src = $('.chatlogs').last;
-	src.appendChild(img);*/
 	var scrollToThisElement = $(".chatlogs div:last-child");
 	var position = scrollToThisElement.offset().top;
-	alert(position);
 	$('.chatlogs').animate({scrollTop: position-20});
   });
 
